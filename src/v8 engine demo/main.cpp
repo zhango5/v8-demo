@@ -12,8 +12,9 @@ int main( int argc, char* argv[] ) {
 
     Engine* engine = new Engine( argv[0] );
 
-    engine->addTask( "'execute task1'" );
-    engine->addTask( "'execute task2'" );
+    engine->asyncTask( "'execute task1'" );
+    engine->asyncTask( "'execute task2'" );
+    engine->syncTask( "'execute task3'" );
 
     int c = getchar();
 
